@@ -1,0 +1,315 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+
+/* Header */
+header {
+    background: #061d4f;
+    background: linear-gradient(90deg, rgb(33, 41, 57) 0%, rgb(12, 15, 13) 50%, rgb(26, 26, 22) 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: flex;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    padding: 50px;
+    justify-content: center;
+}
+
+.slogan-img {
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url('/img/background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+}
+/* Cabeçalho da Seção */
+.titulo-atuacao {
+    text-align: center;
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.subtitulo-atuacao {
+    text-align: center;
+    color: #0763cc;
+    /* Azul suave da imagem */
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.atuacao-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Grid de Atuação */
+.grid-atuacao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas conforme a imagem */
+    gap: 30px;
+}
+
+/* Estilo do Card */
+.card {
+    background: #fff;
+    border: 1px solid #333;
+    /* Borda fina escura */
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #4a90e2;
+    /* Muda para azul no hover */
+}
+
+/* Ícone */
+.icon-placeholder {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Títulos dos Cards */
+.card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/* Descrição dos Cards */
+.card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+.perfil-advogado-container {
+    padding: 50px 20px;
+    background: #061d4f;
+    background: linear-gradient(90deg, rgba(6, 29, 79, 1) 0%, rgb(12, 15, 13) 50%, rgb(32, 32, 30) 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-equipe {
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .grid-atuacao {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card:hover {
+    background: #c5a059;
+    transform: translateY(-5px);
+}
+
+/* Container que segura a imagem e o texto */
+.foto-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+/* Imagem ocupando todo o espaço */
+.imagem-perfil {
+    width: 100%;
+    display: block;
+}
+
+/* Caixa de texto sobreposta no canto inferior esquerdo */
+.info-sobreposta {
+    position: absolute;
+    bottom: 20px;
+    /* Distância do fundo */
+    left: 20px;
+    /* Distância da esquerda */
+    color: white;
+    /* Texto branco para contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Sombra para ler melhor sobre a foto */
+    text-align: left;
+}
+
+/* Estilo do Nome */
+.info-sobreposta h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Estilo do Cargo (Azul como na imagem) */
+.info-sobreposta p {
+    font-size: 1.4rem;
+    color: #4a90e2;
+    /* Azul aproximado da foto */
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Formulário de Contato */
+.contato h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#form-contato {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #c5a059;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    height: 200px;
+    margin-left: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.footer-horarios p {
+    color: #ccc;
+    margin-top: 5px;
+}
