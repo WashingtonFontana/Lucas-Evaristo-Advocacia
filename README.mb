@@ -1,6 +1,6 @@
 # ⚖️ Projeto Advocacia Especializada
 
-Este é um site institucional funcional desenvolvido para o meu projeto acadêmico, focado em apresentar serviços jurídicos de forma moderna e intuitiva.
+Este é um site institucional funcional desenvolvido para o meu projeto acadêmico, focado em apresentar o trabalho jurídico do escritório de advocacia parceiro.
 
 ## 🚀 Tecnologias Utilizadas
 * **HTML5:** Estruturação semântica.
@@ -8,15 +8,16 @@ Este é um site institucional funcional desenvolvido para o meu projeto acadêmi
 * **JavaScript:** Validação de formulários e interatividade.
 
 ## 🛠️ Funcionalidades
-- [x] Cabeçalho fixo com navegação.
+- [x] Cabeçalho fixo
 - [x] Hero section com imagem de fundo e overlay.
 - [x] Grade de áreas de atuação (Criminal, Trabalhista, etc).
 - [x] Seção de perfil do advogado responsável.
 - [x] Formulário de contato funcional (validação via JS).
 - [x] Rodapé com horários de funcionamento.
 
-## 📸 Demonstração
-*(Aqui você pode tirar um print do seu site e colocar o link da imagem)*
+## ✍️ Créditos
+Este projeto foi desenvolvido integralmente por:
 
-## ✒️ Autor
-* **Washington** - [Seu GitHub](https://github.com/seu-usuario)
+#### Washington Fontana Netto
+
+#### ⭐ Desenvolvido para fins acadêmicos.
