@@ -26,17 +26,18 @@ header {
 .container-nav-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
 }
 
 .navbar {
     padding: 50px;
-    justify-content: center;
+    margin-right: 500px;
 }
 
 .slogan-img {
     height: 100px;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
 nav ul {
@@ -88,6 +89,7 @@ nav ul li a {
     max-width: 700px;
     margin: auto;
 }
+
 /* Cabeçalho da Seção */
 .titulo-atuacao {
     text-align: center;
@@ -178,6 +180,95 @@ nav ul li a {
     font-weight: 500;
 }
 
+.contato-paragrafo {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 32px;
+    color: #0a0a0a;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #c5a059;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+.footer-links h4,
+.footer-horarios h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #4a90e2;
+}
+
+.footer-horarios li {
+    color: #ccc;
+    line-height: 1.6;
+    list-style: none;
+}
+
 
 
 /* Responsividade para celulares */
@@ -252,64 +343,4 @@ nav ul li a {
 
 .form-group {
     margin-bottom: 15px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.btn-enviar {
-    width: 100%;
-    padding: 15px;
-    background: #1a1a1a;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.btn-enviar:hover {
-    background: #c5a059;
-}
-
-/* Footer */
-footer {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 50px 0;
-    margin-top: 40px;
-}
-
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.footer-logo img {
-    height: 200px;
-    margin-left: 20px;
-}
-
-.footer-links ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    line-height: 2;
-}
-
-.footer-horarios p {
-    color: #ccc;
-    margin-top: 5px;
 }
