@@ -13,7 +13,7 @@
     <header>
         <div class="container-nav-container">
             <div class="logo">
-                <img src="/img/slogan.png" alt="Slogan Advocacia" class="slogan-img">
+                <a href=""><img src="/img/slogan.png" alt="Slogan Advocacia" class="slogan-img"></a>
             </div>
             <nav>
                 <ul class="navbar">
@@ -27,13 +27,19 @@
 
     <section id="home" class="hero">
         <div class="hero-overlay">
-            <h1>Seja Bem-vindo</h1>
-            <p>Transformando desafios jurídicos complexos em soluções eficazes e personalizadas.</p>
+            <div class="container-hero-content">
+                <p class="welcome-text">SEJA BEM-VINDO!</p>
+                <h1>Lucas Evaristo -</h1>
+                <h1>Advocacia e Consultoria</h1>
+                <p class="hero-subtitle">Transformando desafios jurídicos complexos em soluções eficazes e
+                    personalizadas</p>
+                <a href="#contato" class="btn-hero">ENTRE EM CONTATO</a>
+            </div>
         </div>
     </section>
 
     <section class="atuacao-container">
-        <p class="subtitulo-atuacao">NOSSAS ESPECIALIDADES</p>
+        <p class="subtitulo-atuacao"><span>NOSSAS</span> <span>ESPECIALIDADES</span></p>
         <h2 class="titulo-atuacao">Áreas de atuação</h2>
 
         <div class="grid-atuacao">
@@ -70,18 +76,18 @@
 
     <section id="sobre" class="perfil-advogado-container">
         <h1 class="titulo-equipe">Nosso Corpo Jurídico</h1>
-    <div class="foto-container">
-        <img src="/img/foto-perfil.jpeg" alt="Lucas Evaristo" class="imagem-perfil">
-        <div class="info-sobreposta">
-            <h2>Lucas Evaristo</h2>
-            <p>Advogado</p>
+        <div class="foto-container">
+            <img src="/img/foto-perfil.jpeg" alt="Lucas Evaristo" class="imagem-perfil">
+            <div class="info-sobreposta">
+                <h2>Lucas Evaristo</h2>
+                <p>Advogado</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <section id="contato" class="contato container">
+    <section id="contato" class="contato-container">
         <h2 class="contato-paragrafo">Fale Conosco</h2>
-        <form id="form-contato">
+        <form onsubmit="enviarWhats(event)" id="form-contato">
             <div class="form-group">
                 <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
             </div>
@@ -96,7 +102,7 @@
     </section>
 
     <footer>
-        <div class="container footer-grid">
+        <div class="container-footer-grid">
             <div class="footer-logo">
                 <a href="#home"><img src="/img/slogan.png" alt="Slogan Footer"></a>
             </div>
@@ -113,13 +119,30 @@
                 <ul>
                     <li>Segunda a Sexta: 09:00 - 18:00</li>
                     <li>Sábado e Domingo: Fechado</li>
-                    
+
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const telCliente = document.getElementById('telefone').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const telDestino = '5532999701467';
+            const texto = `Olá! Me chamo ${nome}. ${mensagem}`
+
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telDestino}?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 
 </html>

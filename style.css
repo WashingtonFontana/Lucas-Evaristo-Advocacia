@@ -18,7 +18,7 @@ header {
     background: #061d4f;
     background: linear-gradient(90deg, rgb(33, 41, 57) 0%, rgb(12, 15, 13) 50%, rgb(26, 26, 22) 100%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: flex;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
@@ -26,13 +26,19 @@ header {
 .container-nav-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* Alinha logo e menu verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 10px 20px;
 }
 
 .navbar {
-    padding: 50px;
-    margin-right: 500px;
+    padding: 0;
+    margin: 0;
 }
+
+
 
 .slogan-img {
     height: 100px;
@@ -52,42 +58,99 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
+    position: relative;
+    padding-bottom: 5px;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after,
+.footer-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4a90e2;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+.footer-links ul li a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
 .hero {
-    height: 80vh;
+    height: 100vh;
     background: url('/img/background.jpg') no-repeat center center/cover;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+.container-hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: left;
+    z-index: 2;
+}
+
+.welcome-text {
+    color: #4a90e2;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+    color: #fff;
+    font-size: 72px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', serif;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: auto;
+.hero-subtitle {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.btn-hero:hover {
+    background: #ffffff;
+    color: #000000;
 }
 
 /* Cabeçalho da Seção */
@@ -180,107 +243,44 @@ nav ul li a {
     font-weight: 500;
 }
 
+.contato-container {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
 .contato-paragrafo {
-    padding: 20px;
-    margin-top: 30px;
     text-align: center;
     font-size: 32px;
-    color: #0a0a0a;
+    margin-bottom: 40px;
+    color: #1a1a1a;
 }
 
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#form-contato {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.btn-enviar {
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo dos Inputs */
+#form-contato input,
+#form-contato textarea {
     width: 100%;
     padding: 15px;
-    background: #1a1a1a;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    transition: 0.3s;
+    font-size: 16px;
+    background: #fff;
+    transition: border-color 0.3s;
 }
 
-.btn-enviar:hover {
-    background: #c5a059;
-}
-
-/* Footer */
-footer {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 60px 0;
-    margin-top: 40px;
-}
-
-.footer-grid {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
-.footer-logo img {
-    max-width: 250px;
-    height: auto;
-}
-
-.footer-links h4,
-.footer-horarios h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #4a90e2;
-}
-
-.footer-horarios li {
-    color: #ccc;
-    line-height: 1.6;
-    list-style: none;
-}
-
-
-
-/* Responsividade para celulares */
-@media (max-width: 768px) {
-    .grid-atuacao {
-        grid-template-columns: 1fr;
-    }
-}
-
-.card:hover {
-    background: #c5a059;
-    transform: translateY(-5px);
+/* Efeito de foco (cor azul que você usou) */
+#form-contato input:focus,
+#form-contato textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
 }
 
 /* Container que segura a imagem e o texto */
@@ -330,17 +330,180 @@ footer {
     font-weight: bold;
 }
 
-/* Formulário de Contato */
-.contato h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.card:hover {
+    background: #c5a059;
+    transform: translateY(-5px);
 }
 
-#form-contato {
-    max-width: 600px;
-    margin: auto;
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #4a90e2;
+}
+
+/* Footer */
+footer {
+    background: #061d4f;
+    background: linear-gradient(90deg, rgba(6, 29, 79, 1) 0%, rgb(12, 15, 13) 50%, rgb(32, 32, 30) 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.container-footer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+.footer-logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+.footer-links h4,
+.footer-horarios h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #4a90e2;
+}
+
+.footer-horarios li {
+    color: #ccc;
+    line-height: 1.6;
+    list-style: none;
+}
+
+
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+
+    /* Ajuste da Grid de Atuação */
+    .grid-atuacao {
+        grid-template-columns: 1fr !important;
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    /* Ajuste do Nome do Advogado sobre a foto */
+    .info-sobreposta h2 {
+        font-size: 1.4rem;
+    }
+
+    .info-sobreposta p {
+        font-size: 1rem;
+        /* Diminui o cargo */
+    }
+
+    .info-sobreposta {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    /* Ajuste do Título e Hero (Aquele que estava cortando) */
+    .hero h1 {
+        font-size: 30px !important;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .container-hero-content {
+        padding: 0 20px !important;
+        text-align: center !important;
+    }
+
+    /* Ajuste do Formulário */
+    #form-contato {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    input,
+    textarea {
+        font-size: 16px !important;
+        /* Evita que o iPhone dê zoom automático no input */
+    }
+
+    /* Ajuste do Header/Menu */
+    .container-nav-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .slogan-img {
+        margin: 0 0 15px 0;
+        height: 70px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+        color: #fff;
+    }
 }
