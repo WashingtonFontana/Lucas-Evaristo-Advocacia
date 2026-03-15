@@ -1,4 +1,4 @@
-# ⚖️ Projeto Advocacia Especializada
+# ⚖️ Lucas Evaristo - Advocacia e Consultoria
 
 Este é um site institucional funcional desenvolvido para o meu projeto acadêmico, focado em apresentar o trabalho jurídico do escritório de advocacia parceiro.
 
