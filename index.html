@@ -142,8 +142,9 @@
     </footer>
 
     <script>
+        // Função para formatar os dados do formulário e abrir o WhatsApp do advogado
         function enviarWhats(event) {
-            event.preventDefault();
+            event.preventDefault(); // Evita que o formulário tente enviar para um servidor inexistente
 
             const nome = document.getElementById('nome').value;
             const telCliente = document.getElementById('telefone').value;
@@ -152,13 +153,14 @@
             const telDestino = '5532999701467';
             const texto = `Olá! Me chamo ${nome}. ${mensagem}`
 
+            // encodeURIComponent: Transforma espaços e caracteres especiais em formato aceito pela URL
             const msgFormatada = encodeURIComponent(texto);
-
             const url = `https://wa.me/${telDestino}?text=${msgFormatada}`;
 
             window.open(url, '_blank');
         }
 
+        // Lógica de abertura/fechamento do Menu Mobile
         const btnMenu = document.getElementById('mobile-menu');
         const nav = document.querySelector('.navbar');
 

@@ -1,4 +1,6 @@
-/* Configurações Gerais */
+/* ============================================================
+   CONFIGURAÇÕES GERAIS E RESET
+   ============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +14,9 @@ body {
     scroll-behavior: smooth;
 }
 
-
-/* Header */
+/* ============================================================
+   HEADER E NAVEGAÇÃO
+   ============================================================ */
 header {
     background: #061d4f;
     background: linear-gradient(90deg, rgba(6, 29, 79, 1) 0%, rgb(12, 15, 13) 50%, rgb(32, 32, 30) 100%);
@@ -31,13 +34,6 @@ header {
     margin: 0 auto;
     padding: 10px 20px;
 }
-
-.navbar {
-    padding: 0;
-    margin: 0;
-}
-
-
 
 .slogan-img {
     height: 100px;
@@ -65,6 +61,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* Efeito de linha animada abaixo dos links do menu */
 nav ul li a::after,
 .footer-links ul li a::after {
     content: '';
@@ -80,9 +77,13 @@ nav ul li a::after,
 nav ul li a:hover::after,
 .footer-links ul li a:hover::after {
     width: 100%;
+    /* Sublinhado expande ao passar o mouse */
 }
 
-/* Hero Section */
+/* ============================================================
+   SEÇÃO HERO (BANNER PRINCIPAL)
+   ============================================================ */
+
 .hero {
     height: 100vh;
     background: url('/img/background.jpg') no-repeat center center/cover;
@@ -91,6 +92,7 @@ nav ul li a:hover::after,
     align-items: center;
 }
 
+/* Camada escura sobre a imagem para destacar o texto */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -152,7 +154,10 @@ nav ul li a:hover::after,
     color: #000000;
 }
 
-/* Cabeçalho da Seção */
+/* ============================================================
+   SEÇÃO ÁREAS DE ATUAÇÃO (CARDS)
+   ============================================================ */
+
 .titulo-atuacao {
     text-align: center;
     font-size: 32px;
@@ -164,7 +169,6 @@ nav ul li a:hover::after,
 .subtitulo-atuacao {
     text-align: center;
     color: #0763cc;
-    /* Azul suave da imagem */
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -177,7 +181,7 @@ nav ul li a:hover::after,
     padding: 40px 20px;
 }
 
-/* Grid de Atuação */
+/* Grid layout para organizar os cards em 3 colunas */
 .grid-atuacao {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -185,7 +189,6 @@ nav ul li a:hover::after,
     align-items: stretch;
 }
 
-/* Estilo do Card */
 .card {
     display: flex;
     background: #fff;
@@ -202,17 +205,14 @@ nav ul li a:hover::after,
 .card:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     border-color: #4a90e2;
-    /* Muda para azul no hover */
 }
 
-/* Ícone */
 .icon-placeholder {
     font-size: 40px;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Títulos dos Cards */
 .card h3 {
     font-size: 22px;
     color: #333;
@@ -220,9 +220,9 @@ nav ul li a:hover::after,
     font-weight: 400;
 }
 
-/* Descrição dos Cards */
 .card p {
     flex-grow: 1;
+    /* Faz o texto ocupar o espaço disponível para alinhar os botões/rodapé do card */
     min-height: 100px;
     margin-bottom: 20px;
     font-size: 14px;
@@ -230,6 +230,10 @@ nav ul li a:hover::after,
     line-height: 1.6;
     max-width: 250px;
 }
+
+/* ============================================================
+   SEÇÃO PERFIL E CONTATO
+   ============================================================ */
 
 .perfil-advogado-container {
     padding: 50px 20px;
@@ -267,7 +271,7 @@ nav ul li a:hover::after,
     margin-bottom: 20px;
 }
 
-/* Estilo dos Inputs */
+/* Estilo dos campos de texto (Inputs e Textarea) */
 #form-contato input,
 #form-contato textarea {
     width: 100%;
@@ -286,7 +290,7 @@ nav ul li a:hover::after,
     outline: none;
 }
 
-/* Container que segura a imagem e o texto */
+/* Estilo da imagem do advogado com texto sobreposto */
 .foto-container {
     position: relative;
     width: 100%;
@@ -303,17 +307,13 @@ nav ul li a:hover::after,
     display: block;
 }
 
-/* Caixa de texto sobreposta no canto inferior esquerdo */
 .info-sobreposta {
     position: absolute;
+    /* Fixa o texto sobre a imagem */
     bottom: 20px;
-    /* Distância do fundo */
     left: 20px;
-    /* Distância da esquerda */
     color: white;
-    /* Texto branco para contraste */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Sombra para ler melhor sobre a foto */
     text-align: left;
 }
 
@@ -324,11 +324,10 @@ nav ul li a:hover::after,
     font-weight: 500;
 }
 
-/* Estilo do Cargo (Azul como na imagem) */
+/* Estilo do Cargo */
 .info-sobreposta p {
     font-size: 1.4rem;
     color: #4a90e2;
-    /* Azul aproximado da foto */
     margin-top: 5px;
     font-weight: bold;
 }
@@ -363,7 +362,10 @@ textarea {
     background-color: #4a90e2;
 }
 
-/* Footer */
+/* ============================================================
+   RODAPÉ (FOOTER)
+   ============================================================ */
+
 footer {
     background: #061d4f;
     background: linear-gradient(90deg, rgba(6, 29, 79, 1) 0%, rgb(12, 15, 13) 50%, rgb(32, 32, 30) 100%);
@@ -377,12 +379,12 @@ footer {
     justify-content: center;
     gap: 100px;
     flex-wrap: wrap;
+    /* Permite que os itens quebrem linha se não houver espaço */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 
 }
-
 
 .footer-logo img {
     max-width: 250px;
@@ -427,9 +429,10 @@ footer {
     color: #ccc;
 }
 
+/* ============================================================
+   RESPONSIVIDADE (MOBILE)
+   ============================================================ */
 
-
-/* Responsividade para celulares */
 @media (max-width: 768px) {
 
     header {
@@ -459,6 +462,7 @@ footer {
         transition: 0.3s;
     }
 
+    /* Transforma o menu em uma janela lateral oculta */
     .navbar {
         position: fixed;
         top: 0;
@@ -490,21 +494,19 @@ footer {
         display: block;
     }
 
-    /* Ajuste da Grid de Atuação */
+    /* Ajusta a grid de especialidades para uma coluna só no celular */
     .grid-atuacao {
         grid-template-columns: 1fr !important;
         padding: 0 10px;
         gap: 20px;
     }
 
-    /* Ajuste do Nome do Advogado sobre a foto */
     .info-sobreposta h2 {
         font-size: 1.4rem;
     }
 
     .info-sobreposta p {
         font-size: 1rem;
-        /* Diminui o cargo */
     }
 
     .info-sobreposta {
@@ -516,7 +518,6 @@ footer {
         height: 80vh;
     }
 
-    /* Ajuste do Título e Hero (Aquele que estava cortando) */
     .hero h1 {
         font-size: 30px !important;
         line-height: 1.1;
@@ -532,7 +533,6 @@ footer {
         text-align: center !important;
     }
 
-    /* Ajuste do Formulário */
     #form-contato {
         width: 90%;
         padding: 0 10px;
@@ -541,7 +541,6 @@ footer {
     input,
     textarea {
         font-size: 16px !important;
-        /* Evita que o iPhone dê zoom automático no input */
     }
 
     .slogan-img {
@@ -549,6 +548,7 @@ footer {
         height: 70px;
     }
 
+    /* Empilha os elementos do rodapé verticalmente */
     .container-footer-grid {
         display: flex;
         flex-direction: column;
