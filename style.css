@@ -36,14 +36,15 @@ header {
 }
 
 .slogan-img {
-    height: 100px;
-    margin-left: 50px;
-    margin-top: 10px;
+    height: 80px;
+    width: auto;
+    display: block;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    gap: 20px;
 }
 
 nav ul li {
