@@ -15,6 +15,9 @@ Este é um site institucional funcional desenvolvido para o meu projeto acadêmi
 - [x] Formulário de contato funcional (validação via JS).
 - [x] Rodapé com horários de funcionamento.
 
+## 🌍 Impacto Social (ODS)
+Este projeto está alinhado com o **ODS 16 (Paz, Justiça e Instituições Eficazes)** da ONU, visando facilitar o acesso democrático à informação jurídica e promover um canal direto e eficiente entre o cidadão e a justiça.
+
 ## ✍️ Créditos
 Este projeto foi desenvolvido integralmente por:
 
